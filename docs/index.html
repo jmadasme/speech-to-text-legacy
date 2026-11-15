@@ -134,6 +134,75 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   .stat{border-right:0;border-bottom:1px solid var(--line)}
   h1{font-size:42px}
 }
+
+/* ── Contenido heredado del proyecto original, en clave sobria ── */
+.rich{max-width:78ch}
+.rich p{margin:0 0 14px;color:#c3d4da}
+.rich h3{margin:26px 0 10px;font-size:19px;letter-spacing:-.02em}
+.rich h4{margin:22px 0 8px;font-size:15px;letter-spacing:-.01em}
+.rich ul,.rich ol{margin:0 0 16px;padding-left:22px;color:#c3d4da}
+.rich li{margin:0 0 6px}
+.rich figure{margin:22px 0;border:1px solid var(--line);border-radius:16px;padding:10px;background:rgba(11,34,43,.5)}
+.rich figure img{width:100%;display:block;border-radius:10px}
+.rich figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:9px;line-height:1.5}
+.rich .table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}
+.rich table{border-collapse:collapse;width:100%;font-size:13.5px}
+.rich th,.rich td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rich th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(11,34,43,.6)}
+.rich tr:last-child td{border-bottom:0}
+.rich pre{margin:18px 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#04141a;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.6;color:#cfe3e8}
+.rich code{font-family:var(--mono);font-size:.92em}
+.rich .note{margin:18px 0;padding:13px 16px;border-left:2px solid var(--accent);background:rgba(42,157,143,.07);color:#c3d4da;font-size:14px}
+.rich .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.rich .card-grid .card{margin:0}
+
+
+.rich h3{margin:26px 0 8px}
+.rich p{margin:0 0 14px;color:var(--muted);line-height:1.7}
+.fail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:6px}
+.fail{background:rgba(11,34,43,.55);border:1px solid var(--line);border-radius:14px;padding:18px}
+.fail .v{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--warm,#D6A86A)}
+.fail h3{font-size:16px;margin:8px 0 6px}
+.fail p{font-size:14px;margin:0;color:var(--muted)}
+.rating-head{display:flex;align-items:center;gap:20px;margin:6px 0 18px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(11,34,43,.55)}
+.rating-avg{font-family:var(--mono);font-size:40px;line-height:1;color:var(--accent)}
+.rating-avg small{font-size:14px;color:var(--muted)}
+.rating-head p{margin:4px 0 0;font-size:14px;color:var(--muted);max-width:70ch}
+.rating{display:grid;gap:2px}
+.rating-row{display:grid;grid-template-columns:165px minmax(90px,1fr) 48px;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.rating-row:last-child{border-bottom:0}
+.rating-name{font-size:13.5px;font-weight:600}
+.rating-bar{height:6px;border-radius:99px;background:rgba(148,190,200,.14);overflow:hidden}
+.rating-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.rating-score{font-family:var(--mono);font-size:12.5px;color:var(--accent);text-align:right}
+.rating-note{grid-column:2/-1;font-size:12.5px;color:var(--muted);margin-top:-4px}
+.faq{display:grid;gap:0;margin-top:4px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";display:inline-block;width:18px;color:var(--accent);font-family:var(--mono)}
+.faq details[open] summary::before{content:"–"}
+.faq p{margin:10px 0 0 18px;font-size:14px;color:var(--muted)}
+@media(max-width:720px){
+  .fail-grid{grid-template-columns:1fr}
+  .rating-head{flex-direction:column;align-items:flex-start}
+  .rating-row{grid-template-columns:120px 1fr 44px}
+}
+
+
+.detail h2{margin:34px 0 10px;font-size:24px;letter-spacing:-.02em}
+.detail h3{margin:24px 0 8px;font-size:17px}
+.detail p{margin:0 0 14px;color:var(--muted);line-height:1.75}
+.detail ul,.detail ol{margin:0 0 16px 20px;color:var(--muted)}
+.detail li{margin:6px 0}
+.detail table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.detail th,.detail td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.detail th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.detail pre{background:rgba(6,20,27,.75);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:13px}
+.detail code{font-family:var(--mono);font-size:.92em}
+.detail img{max-width:100%;border-radius:12px;border:1px solid var(--line)}
+.detail blockquote{border-left:2px solid var(--accent);margin:14px 0;padding:2px 0 2px 16px;color:var(--muted)}
+
 </style>
 <link rel="stylesheet" href="assets/community.css?v=1">
 </head>
@@ -182,35 +251,570 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   <a href="https://github.com/jmadasme/speech-to-text-legacy/tree/main/versions/SpeechToTextAux" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </article></div>
 </div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>Speech to Text Legacy es una aplicación de consola para Windows 10 escrita en C que transcribe voz en español con SAPI 5. Captura el dispositivo de entrada predeterminado —line-in, micrófono o USB— y muestra cada frase reconocida con marca de tiempo, sin enviar audio a la nube.</p><p>Está orientada a equipos Windows antiguos o con recursos limitados donde no conviene instalar un modelo grande ni depender de un servicio externo. Sirve para dictado, transcripción de radio o accesibilidad, y se conserva como antecedente de las familias de voz actuales. Su límite principal es la precisión de SAPI y la dependencia del paquete de idioma.</p></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El proyecto en detalle</div><h2>Documentación preservada</h2><p class="section-sub">El README original de la versión de referencia, completo.</p></div><div class="detail rich reveal">
+<p>Reconocimiento de voz en español en tiempo real desde la entrada auxiliar (line-in) de Windows 10, utilizando la API nativa <strong>SAPI (Speech API)</strong> de Microsoft.</p>
+<h2 id="descripcion">Descripcion</h2>
+<p>SpeechToTextAux es un programa en C para Windows 10 que captura audio continuamente desde el dispositivo de entrada predeterminado del sistema (line-in, microfono o cualquier entrada de audio) y realiza reconocimiento de voz a texto en <strong>espanol</strong> mediante la API de reconocimiento de voz de Windows (SAPI 5). El texto reconocido se muestra en la consola en tiempo real con marcas de tiempo.</p>
+<p>El programa esta disenado para funcionar con <strong>entrada auxiliar (line-in o aux-in)</strong>, tipicamente utilizada para conectar fuentes de audio externas como micrófonos de solapa, mezcladores, radios, televisores, sistemas de megafonia o cualquier dispositivo con salida de audio analogica de 3.5 mm.</p>
+<h2 id="principio-de-funcionamiento">Principio de funcionamiento</h2>
+<h3 id="que-es-sapi">Que es SAPI?</h3>
+<p><strong>SAPI (Speech Application Programming Interface)</strong> es una API de Microsoft incluida de forma nativa en Windows desde Windows 2000/XP. En Windows 10, SAPI 5.4+ esta preinstalado y listo para usar. Proporciona dos funcionalidades principales:</p>
+<ul>
+<li><strong>Reconocimiento de voz (Speech-to-Text)</strong>: Convierte audio en texto</li>
+<li><strong>Sintesis de voz (Text-to-Speech)</strong>: Convierte texto en voz</li>
+</ul>
+<p>SpeechToTextAux utiliza unicamente la funcionalidad de reconocimiento.</p>
+<h3 id="como-funciona-el-reconocimiento-de-voz-con-sapi">Como funciona el reconocimiento de voz con SAPI</h3>
+<ol>
+<li>
+<p><strong>Captura de audio</strong>: SAPI accede al dispositivo de entrada predeterminado del sistema a traves de Windows Audio Session API (WASAPI) o el controlador de audio heredado, capturando el flujo de audio en tiempo real.</p>
+</li>
+<li>
+<p><strong>Motor de reconocimiento</strong>: El motor de SAPI (SpRecognizer) procesa el audio utilizando modelos acusticos y de lenguaje. Para espanol, se necesita el paquete de voz correspondiente, que contiene los modelos foneticos y el diccionario del idioma.</p>
+</li>
+<li>
+<p><strong>Gramatica de dictado</strong>: SAPI utiliza una "gramatica de dictado" (dictation grammar) que permite el reconocimiento de voz continua y libre, sin restricciones de comandos fijos. Esto es distinto a una gramatica basada en reglas (como las usadas para comandos de voz).</p>
+</li>
+<li>
+<p><strong>Eventos asincronos</strong>: El reconocimiento es asincrono. Cuando SAPI detecta una frase completa, dispara un evento (SPEI_RECOGNITION) que se entrega al programa a traves de un mensaje de Windows (WM_RECO_EVENT) en el hilo principal.</p>
+</li>
+<li>
+<p><strong>Extraccion de texto</strong>: El programa recibe el evento, obtiene el texto reconocido mediante ISpRecoResult::GetText() y lo muestra en la consola.</p>
+</li>
+</ol>
+<h3 id="arquitectura-del-sistema-de-audio">Arquitectura del sistema de audio</h3>
+<pre><code>[Fuente de audio externa] -&gt; [Cable 3.5 mm] -&gt; [Entrada line-in (azul)]
+                                                      |
+                                                      v
+                                          [Controlador de audio]
+                                                      |
+                                                      v
+                                          [Dispositivo predeterminado]
+                                                      |
+                                                      v
+                                          [SAPI 5 - SpRecognizer]
+                                                      |
+                                                      v
+                                          [Evento SPEI_RECOGNITION]
+                                                      |
+                                                      v
+                                          [WM_RECO_EVENT]
+                                                      |
+                                                      v
+                                          [Console - texto en pantalla]
+</code></pre>
+<h2 id="requisitos-del-sistema">Requisitos del sistema</h2>
+<ul>
+<li><strong>Sistema operativo</strong>: Windows 10 (cualquier edicion: Home, Pro, Enterprise)</li>
+<li><strong>Arquitectura</strong>: x86 (32 bits) o x64 (64 bits)</li>
+<li><strong>Librerias nativas</strong>: SAPI 5.4+ (incluido en Windows 10), COM (ole32.dll)</li>
+<li><strong>Paquete de voz</strong>: Reconocimiento de voz en espanol (instalable desde configuracion de Windows)</li>
+<li><strong>Dispositivo de entrada</strong>: Cualquier dispositivo de audio reconocido por Windows como dispositivo de entrada predeterminado (line-in, microfono, USB, etc.)</li>
+<li><strong>Memoria</strong>: &lt; 10 MB de RAM en ejecucion</li>
+<li><strong>Disco</strong>: ~100 KB para el ejecutable</li>
+</ul>
+<h2 id="guia-de-instalacion">Guia de instalacion</h2>
+<h3 id="1-instalar-el-paquete-de-voz-en-espanol">1. Instalar el paquete de voz en espanol</h3>
+<p>Windows 10 no incluye el paquete de reconocimiento de voz en espanol por defecto. Debe instalarse manualmente:</p>
+<p><strong>Metodo 1: Configuracion de Windows (recomendado)</strong></p>
+<ol>
+<li>Abra <strong>Configuracion</strong> (Win + I)</li>
+<li>Vaya a <strong>Hora e idioma</strong> &gt; <strong>Idioma</strong></li>
+<li>Si "Espanol (Espana)" no aparece en la lista, haga clic en <strong>Agregar un idioma</strong></li>
+<li>Busque y seleccione <strong>Espanol (Espana)</strong> o <strong>Espanol (Mexico)</strong></li>
+<li>Una vez agregado, haga clic en el idioma y seleccione <strong>Opciones</strong></li>
+<li>En la seccion <strong>Voz</strong>, haga clic en <strong>Descargar</strong></li>
+<li>Espere a que se complete la descarga e instalacion (puede tardar varios minutos)</li>
+</ol>
+<p><strong>Metodo 2: Instalacion directa</strong></p>
+<p>Si prefiere usar PowerShell como administrador:</p>
+<pre><code class="language-powershell"># Instalar el paquete de reconocimiento de voz en espanol (Espana)
+Add-WindowsCapability -Online -Name "Language.Speech.Spanish~~~es-ES~0.0.1.0"
+</code></pre>
+<p>Para espanol (Mexico):</p>
+<pre><code class="language-powershell">Add-WindowsCapability -Online -Name "Language.Speech.Spanish~~~es-MX~0.0.1.0"
+</code></pre>
+<p><strong>Verificacion</strong>:</p>
+<ol>
+<li>Vaya a <strong>Configuracion</strong> &gt; <strong>Hora e idioma</strong> &gt; <strong>Voz</strong></li>
+<li>En "Idioma de voz", deberia aparecer "Espanol (Espana)" o "Espanol (Mexico)"</li>
+<li>Ejecute el programa SpeechToTextAux; si no hay errores de idioma, la instalacion fue exitosa</li>
+</ol>
+<h3 id="2-configurar-la-entrada-auxiliar-line-in-como-dispositivo-predeterminado">2. Configurar la entrada auxiliar (line-in) como dispositivo predeterminado</h3>
+<p>Para capturar audio desde la entrada auxiliar (line-in), debe configurarla como dispositivo de entrada predeterminado:</p>
+<ol>
+<li>Conecte su fuente de audio a la entrada <strong>line-in (color azul)</strong> de la placa de sonido</li>
+<li>Haga clic derecho en el icono de <strong>altavoz</strong> en la bandeja del sistema y seleccione <strong>Sonidos</strong></li>
+<li>Vaya a la pestana <strong>Grabacion</strong></li>
+<li>Busque <strong>Entrada auxiliar</strong> o <strong>Line In</strong> (puede aparecer como "Dispositivo de entrada auxiliar", "Line In", "What U Hear", "Stereo Mix" o similar)
+   - Si no aparece: haga clic derecho en el area vacia y seleccione <strong>Mostrar dispositivos deshabilitados</strong></li>
+<li>Haga clic derecho sobre <strong>Entrada auxiliar</strong> y seleccione <strong>Establecer como dispositivo predeterminado</strong></li>
+<li>Haga clic derecho nuevamente y seleccione <strong>Establecer como dispositivo de comunicaciones predeterminado</strong></li>
+<li>Hable o reproduzca audio; deberia ver movimiento en las barras de nivel</li>
+<li>Haga clic en <strong>Aceptar</strong></li>
+</ol>
+<p><strong>Nota</strong>: Si su placa de sonido no tiene una entrada line-in fisica, puede usar un adaptador USB a audio de 3.5 mm o un microfono USB. En ese caso, el dispositivo aparecera con el nombre del fabricante y debera seleccionarlo como predeterminado de la misma forma.</p>
+<p><strong>Nota sobre "Stereo Mix" o "What U Hear"</strong>: Algunas placas de sonido ofrecen una entrada llamada "Stereo Mix" o "What U Hear" que captura todo lo que se reproduce por los altavoces. Si desea transcribir audio desde una aplicacion (como un reproductor de video), esta opcion puede ser util. Seleccionela como dispositivo predeterminado.</p>
+<h2 id="compilacion">Compilacion</h2>
+<h3 id="con-mingw-w64-recomendado">Con MinGW-w64 (recomendado)</h3>
+<p>MinGW-w64 es un toolchain libre y ligero que permite compilar el programa sin necesidad de Visual Studio.</p>
+<p><strong>Instalacion de MinGW-w64</strong>:</p>
+<ol>
+<li>Descargue e instale desde https://www.mingw-w64.org/ (recomendado: usar MSYS2)</li>
+<li>Si usa MSYS2: <code>pacman -S mingw-w64-x86_64-gcc</code></li>
+<li>Verifique: <code>gcc --version</code></li>
+</ol>
+<p><strong>Compilacion</strong>:</p>
+<pre><code class="language-batch">make TOOLCHAIN=MINGW
+</code></pre>
+<p>O manualmente:</p>
+<pre><code class="language-batch">gcc -o SpeechToTextAux.exe src/main.c src/recognizer.c src/console_utils.c ^
+    -lole32 -lsapi -lwinmm -mconsole -O2 -Wall -Wextra -Wpedantic -std=c99
+</code></pre>
+<h3 id="con-msvc-visual-studio">Con MSVC (Visual Studio)</h3>
+<p><strong>Requisito</strong>: Visual Studio 2019 o 2022 con la carga de trabajo "Desarrollo para el escritorio con C++".</p>
+<p><strong>Compilacion</strong>:</p>
+<p>Abra un <strong>Developer Command Prompt for VS 2022</strong> y ejecute:</p>
+<pre><code class="language-batch">nmake /f Makefile TOOLCHAIN=MSVC
+</code></pre>
+<p>O manualmente:</p>
+<pre><code class="language-batch">cl /nologo /Fe:SpeechToTextAux.exe /I. /utf-8 /O2 /W4 ^
+    src\main.c src\recognizer.c src\console_utils.c ^
+    /link ole32.lib sapi.lib /SUBSYSTEM:CONSOLE
+</code></pre>
+<h3 id="makefile-objetivos-disponibles">Makefile: objetivos disponibles</h3>
+<table>
+<thead>
+<tr>
+<th>Objetivo</th>
+<th>Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>all</code></td>
+<td>Compilar el programa (predeterminado)</td>
+</tr>
+<tr>
+<td><code>clean</code></td>
+<td>Eliminar archivos objeto y ejecutable</td>
+</tr>
+<tr>
+<td><code>rebuild</code></td>
+<td>Limpiar y recompilar todo</td>
+</tr>
+<tr>
+<td><code>help</code></td>
+<td>Mostrar ayuda del Makefile</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dependencias-de-compilacion">Dependencias de compilacion</h3>
+<ul>
+<li><strong>Windows SDK</strong> (incluye sapi.h y las librerias ole32.lib, sapi.lib)</li>
+<li>MinGW-w64: el archivo sapi.h suele estar en <code>mingw-w64-x86_64-sdk</code> o en los headers incluidos con MinGW</li>
+<li>MSVC: incluido con el SDK de Windows (Windows 10 SDK)</li>
+</ul>
+<h2 id="forma-de-operar">Forma de operar</h2>
+<h3 id="ejecucion">Ejecucion</h3>
+<p>El programa se ejecuta desde la linea de comandos sin argumentos:</p>
+<pre><code class="language-batch">SpeechToTextAux.exe
+</code></pre>
+<h3 id="uso-basico">Uso basico</h3>
+<ol>
+<li>Ejecute el programa en una terminal (CMD, PowerShell o Windows Terminal)</li>
+<li>El programa mostrara mensajes de inicializacion en color verde</li>
+<li>Cuando aparezca "Reconocimiento activo", comience a hablar por el dispositivo de entrada</li>
+<li>Cada frase reconocida aparecera automaticamente con su timestamp</li>
+<li>Para salir, presione <strong>Ctrl+C</strong> (o Ctrl+Break)</li>
+</ol>
+<h3 id="comportamiento-detallado">Comportamiento detallado</h3>
+<p><strong>Inicio</strong>:
+- La ventana de la consola cambia su titulo a "SpeechToTextAux - Reconocimiento de Voz en Espanol"
+- Se inicializa COM en modo multi-hilo
+- Se crea una ventana oculta (sin bordes, sin aparecer en la barra de tareas) para recibir eventos de SAPI
+- Se configura el motor de reconocimiento SAPI con el idioma espanol
+- Se establece la entrada de audio predeterminada
+- Se inicia el reconocimiento</p>
+<p><strong>Operacion normal</strong>:
+- El programa entra en un bucle de mensajes de Windows (GetMessage/DispatchMessage)
+- Cuando SAPI reconoce una frase, envia un mensaje WM_RECO_EVENT a la ventana oculta
+- El programa procesa el evento, extrae el texto y lo imprime en la consola
+- El programa no consume CPU mientras no hay reconocimiento (el bucle se bloquea en GetMessage)</p>
+<p><strong>Finalizacion</strong>:
+- Ctrl+C dispara el manejador de senales que envia WM_CLOSE a la ventana oculta
+- La ventana procedimiento inicia la secuencia de cierre: detiene el reconocimiento, libera los objetos COM de SAPI, destruye la ventana y finaliza COM
+- Se muestra un mensaje de "Programa terminado correctamente"</p>
+<h3 id="codigos-de-salida">Codigos de salida</h3>
+<table>
+<thead>
+<tr>
+<th>Codigo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Terminacion normal</td>
+</tr>
+<tr>
+<td>0xE001</td>
+<td>No se encontro dispositivo de entrada de audio</td>
+</tr>
+<tr>
+<td>0xE002</td>
+<td>Idioma espanol no disponible (codigo no usado actualmente)</td>
+</tr>
+<tr>
+<td>0xE003</td>
+<td>Error al inicializar el motor de reconocimiento SAPI</td>
+</tr>
+<tr>
+<td>0xE004</td>
+<td>Error al inicializar COM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ejemplos-de-uso">Ejemplos de uso</h2>
+<h3 id="ejemplo-1-transcripcion-de-una-entrevista">Ejemplo 1: Transcripcion de una entrevista</h3>
+<p>Escenario: Tiene un microfono de solapa conectado a la entrada auxiliar y quiere transcribir una entrevista.</p>
+<pre><code class="language-batch">C:\&gt; SpeechToTextAux.exe
+[10:15:03] Iniciando reconocimiento de voz en espanol...
+[10:15:03] Reconocimiento activo. Habla por el dispositivo de entrada (line-in/microfono).
+[10:15:03] Presiona Ctrl+C para salir.
+[10:15:12] Bienvenidos a esta entrevista sobre inteligencia artificial
+[10:15:18] La pregunta del dia es como afectara la automatizacion al empleo
+[10:15:28] Creemos que la inteligencia artificial creara nuevas oportunidades
+[10:15:35] Pero tambien es cierto que algunos trabajos desapareceran
+[10:15:42] Sin embargo la historia demuestra que la tecnologia siempre ha generado mas empleo
+[10:16:05] Esa es una perspectiva muy interesante muchas gracias por compartirla
+^C
+[10:16:08] Deteniendo reconocimiento...
+[10:16:08] Liberando recursos SAPI...
+[10:16:08] Programa terminado correctamente.
+</code></pre>
+<h3 id="ejemplo-2-captura-de-audio-desde-una-transmision">Ejemplo 2: Captura de audio desde una transmision</h3>
+<p>Escenario: Conecta la salida de audio de un televisor al line-in para transcribir noticias.</p>
+<pre><code class="language-batch">C:\&gt; SpeechToTextAux.exe
+[11:30:00] Iniciando reconocimiento de voz en espanol...
+[11:30:00] Reconocimiento activo...
+[11:30:15] El presidente anuncio nuevas medidas economicas para el proximo trimestre
+[11:30:22] El ministro de economia detallo los puntos principales de la reforma fiscal
+[11:30:35] Los mercados internacionales han reaccionado de forma positiva al anuncio
+[11:30:48] Los analistas consideran que estas medidas podrian impulsar el crecimiento
+[11:31:02] En otros titulares la comunidad cientifica celebra el avance en la investigacion
+^C
+[11:31:05] Deteniendo reconocimiento...
+[11:31:05] Liberando recursos SAPI...
+[11:31:05] Programa terminado correctamente.
+</code></pre>
+<h3 id="ejemplo-3-error-por-falta-de-dispositivo-de-entrada">Ejemplo 3: Error por falta de dispositivo de entrada</h3>
+<pre><code class="language-batch">C:\&gt; SpeechToTextAux.exe
+[14:35:12] Iniciando reconocimiento de voz en espanol...
+[14:35:12] ERROR: No se encontro dispositivo de entrada de audio. Conecte un microfono
+          o dispositivo a la entrada auxiliar (line-in) y verifique que este configurado
+          como dispositivo predeterminado en Windows.
+  HRESULT: 0x80045002 - The audio input device was not found.
+</code></pre>
+<h3 id="ejemplo-4-error-por-falta-de-paquete-de-idioma-espanol">Ejemplo 4: Error por falta de paquete de idioma espanol</h3>
+<pre><code class="language-batch">C:\&gt; SpeechToTextAux.exe
+[14:35:12] Iniciando reconocimiento de voz en espanol...
+[14:35:12] ADVERTENCIA: No se encontro reconocedor SAPI para espanol (0x0C0A).
+          Usando reconocedor predeterminado del sistema. Instale el paquete de voz
+          en espanol desde Configuracion &gt; Hora e idioma &gt; Voz.
+[14:35:12] Reconocimiento activo...
+</code></pre>
+<h2 id="explicacion-del-funcionamiento-interno">Explicacion del funcionamiento interno</h2>
+<h3 id="diagrama-de-flujo-textual">Diagrama de flujo textual</h3>
+<pre><code>INICIO
+  |
+  v
+[SetConsoleTitleW] --&gt; "SpeechToTextAux - Reconocimiento de Voz en Espanol"
+  |
+  v
+[SetConsoleCtrlHandler] --&gt; Registrar CtrlHandler (Ctrl+C)
+  |
+  v
+[CoInitializeEx(NULL, COINIT_MULTITHREADED)]
+  |  Inicializa COM para el hilo actual
+  |
+  v
+[RegisterClassEx] --&gt; Registrar clase de ventana "SpeechToTextAuxWindowClass"
+  |
+  v
+[CreateWindowEx(WS_EX_TOOLWINDOW, ...)]
+  |  Crea ventana oculta para recibir mensajes de SAPI
+  |
+  v
+[Recognizer_init()]
+  |  - CoCreateInstance(CLSID_SpRecognizer) --&gt; Motor SAPI
+  |  - CreateRecoContext() --&gt; Contexto de reconocimiento
+  |  - SetNotifyWindowMessage(hwnd, WM_RECO_EVENT) --&gt; Notificaciones
+  |  - SetInterest(SPEI_RECOGNITION) --&gt; Evento de frase reconocida
+  |  - CreateGrammar(0) --&gt; Gramatica de dictado
+  |
+  v
+[Recognizer_setAudioInput()]
+  |  SetInput(NULL, TRUE) --&gt; Dispositivo predeterminado
+  |
+  v
+[Recognizer_setLanguage()]
+  |  Busca reconocedor espanol (LCID 0x0C0A) en catalog SAPI
+  |  Si no existe: fallback al predeterminado + advertencia
+  |
+  v
+[Recognizer_start()]
+  |  - LoadDictation(NULL, SPLO_STATIC) --&gt; Cargar gramatica
+  |  - SetDictationState(SPRS_ACTIVE) --&gt; Activar escucha
+  |
+  v
+[BUCLE DE MENSAJES (GetMessage/DispatchMessage)]
+  |
+  +---&gt; [WM_RECO_EVENT] --&gt; Recognizer_handleEvent()
+  |       |  GetEvents() --&gt; Obtener eventos pendientes
+  |       |  Para cada evento SPEI_RECOGNITION:
+  |       |    - Obtener ISpRecoResult (lParam)
+  |       |    - GetText() --&gt; Texto reconocido (WCHAR*)
+  |       |    - Console_printRecognized(texto)
+  |       |    - CoTaskMemFree(texto)
+  |       |    - Release(resultado)
+  |       v
+  |     [Vuelve al bucle]
+  |
+  +---&gt; [WM_CLOSE (por Ctrl+C)] --&gt; Console_printInfo("Deteniendo...")
+  |       |   --&gt; DestroyWindow(hwnd)
+  |       v
+  |     [WM_DESTROY] --&gt; PostQuitMessage(0)
+  |       v
+  |     [WM_QUIT] --&gt; GetMessage() retorna 0 --&gt; Salir del bucle
+  |
+  v
+[Recognizer_stop()] --&gt; SetDictationState(SPRS_INACTIVE)
+  |
+  v
+[Recognizer_cleanup()] --&gt; Release(recoGrammar, recoContext, recognizer)
+  |
+  v
+[DestroyWindow(g_hwnd)] --&gt; Solo si aun existe (g_hwnd != NULL)
+  |
+  v
+[CoUninitialize()] --&gt; Finalizar COM
+  |
+  v
+[Console_printInfo("Programa terminado correctamente.")]
+  |
+  v
+FIN (return 0)
+</code></pre>
+<h3 id="flujo-de-mensajes-de-windows">Flujo de mensajes de Windows</h3>
+<pre><code>          SAPI Engine
+              |
+              |  (hilo interno de SAPI)
+              |
+              v
+  [Evento SPEI_RECOGNITION detectado]
+              |
+              |  SAPI postea WM_RECO_EVENT a la ventana oculta
+              |  via PostMessage() (identificado por el HWND
+              |  registrado en SetNotifyWindowMessage)
+              |
+              v
+  [Cola de mensajes del programa]
+              |
+              |  GetMessage() lo recoje
+              |
+              v
+  [WndProc() recibe WM_RECO_EVENT]
+              |
+              |  wParam/lParam no usados directamente
+              |
+              v
+  [Recognizer_handleEvent()]
+              |
+              |  GetEvents() para obtener SPEVENT
+              |  (un evento puede contener varios resultados)
+              |
+              v
+  [ISpRecoResult::GetText()] --&gt; WCHAR* con el texto
+              |
+              v
+  [Console_printRecognized(WCHAR*)]
+              |
+              |  Timestamp en cian + texto en blanco brillante
+              |  Usa WriteConsoleW (consola) o fwprintf (pipe)
+              |
+              v
+  [CoTaskMemFree(pszText)] + [Release(pResult)]
+</code></pre>
+<h2 id="estructura-del-proyecto">Estructura del proyecto</h2>
+<pre><code>SpeechToTextAux/
+|-- PLAN.md                     - Plan de implementacion original
+|-- AUDIT_REPORT.md             - Reporte de auditoria de codigo
+|-- Makefile                    - Script de compilacion (MSVC / MinGW)
+|-- README.md                   - Esta documentacion
+|-- src/
+|   |-- main.c                  - Punto de entrada, ventana oculta, bucle de mensajes
+|   |-- recognizer.h            - Declaraciones del modulo de reconocimiento SAPI
+|   |-- recognizer.c            - Implementacion del motor de reconocimiento SAPI
+|   |-- console_utils.h         - Declaraciones de utilidades de consola
+|   |-- console_utils.c         - Impresion con colores, timestamps, formato
+|   |-- resource.h              - Constantes: WM_RECO_EVENT, codigos de error, LCIDs
+|-- docs/
+|   |-- datasheet.md            - Especificacion tecnica para el usuario final
+|   |-- desarrollador.md        - Documentacion tecnica para desarrolladores
+|-- build/                      - Directorio de compilacion (generado)
+</code></pre>
+<h2 id="advertencias-y-troubleshooting">Advertencias y troubleshooting</h2>
+<h3 id="problemas-comunes-y-soluciones">Problemas comunes y soluciones</h3>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa probable</th>
+<th>Solucion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"No se encontro dispositivo de entrada de audio"</td>
+<td>No hay ningun dispositivo de entrada configurado como predeterminado</td>
+<td>Conecte un microfono o line-in y configurelo en Sonido &gt; Grabacion &gt; Establecer como predeterminado</td>
+</tr>
+<tr>
+<td>Error 0x80045002 (SPERR_NO_AUDIO_INPUT)</td>
+<td>El dispositivo de entrada no esta disponible o esta deshabilitado</td>
+<td>Verifique que el dispositivo este habilitado en Administrador de dispositivos &gt; Entradas y salidas de audio</td>
+</tr>
+<tr>
+<td>"Error al inicializar el motor de reconocimiento SAPI"</td>
+<td>SAPI no esta disponible en el sistema</td>
+<td>Windows 10 incluye SAPI; si falta, ejecute <code>sfc /scannow</code> o reinstale el SDK de Windows</td>
+</tr>
+<tr>
+<td>"ADVERTENCIA: No se encontro reconocedor SAPI para espanol"</td>
+<td>Paquete de voz en espanol no instalado</td>
+<td>Instale el paquete desde Configuracion &gt; Hora e idioma &gt; Idioma &gt; Espanol &gt; Opciones &gt; Voz &gt; Descargar</td>
+</tr>
+<tr>
+<td>El programa inicia pero no reconoce voz</td>
+<td>El microfono esta silenciado o el volumen de entrada es muy bajo</td>
+<td>Verifique el nivel de entrada en Sonido &gt; Grabacion &gt; Propiedades &gt; Niveles</td>
+</tr>
+<tr>
+<td>El texto reconocido aparece con errores</td>
+<td>Ruido de fondo, mala pronunciacion o volumen bajo</td>
+<td>Acerque la fuente de audio, reduzca el ruido ambiente y verifique el nivel de grabacion</td>
+</tr>
+<tr>
+<td>El reconocimiento es muy lento</td>
+<td>El dispositivo de entrada tiene baja calidad de muestreo</td>
+<td>Verifique que el formato predeterminado sea 16 bits, 44100 Hz (calidad de CD) en Propiedades del dispositivo &gt; Formato predeterminado</td>
+</tr>
+<tr>
+<td>"Error al inicializar COM"</td>
+<td>COM no puede inicializarse (raro en Windows moderno)</td>
+<td>Ejecute como administrador o verifique que la libreria ole32.dll este presente</td>
+</tr>
+<tr>
+<td>La consola no muestra colores</td>
+<td>La terminal no soporta ANSI o esta redirigida</td>
+<td>El programa usa API de consola de Windows (SetConsoleTextAttribute), no secuencias ANSI. Use CMD, PowerShell o Windows Terminal</td>
+</tr>
+<tr>
+<td>El programa no compila con MinGW: "sapi.h: No such file or directory"</td>
+<td>Faltan los headers de SAPI en MinGW</td>
+<td>Instale <code>mingw-w64-x86_64-sdk</code> o copie sapi.h desde el SDK de Windows (incluido en mingw-w64 desde 2019+)</td>
+</tr>
+<tr>
+<td>"undefined reference to <code>IID_ISpRecognizer'" | Libreria sapi no enlazada correctamente | Agregue</code>-lsapi` a las flags de enlace</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="advertencias-importantes">Advertencias importantes</h3>
+<ol>
+<li>
+<p><strong>El reconocimiento no es perfecto</strong>: SAPI es un motor de reconocimiento general. La precision depende de la calidad del audio, la claridad del habla y la ausencia de ruido de fondo.</p>
+</li>
+<li>
+<p><strong>Latencia</strong>: El reconocimiento tipicamente tiene una latencia de 0.5 a 2 segundos desde que se completa una frase hasta que aparece en pantalla.</p>
+</li>
+<li>
+<p><strong>Line-in vs Microfono</strong>: La entrada auxiliar (line-in) espera una senal de nivel de linea (mayor voltaje que un microfono). Si conecta un microfono directamente a una entrada line-in, el audio puede ser muy bajo. Use un microfono con preamplificador o conectelo a la entrada de microfono (rosa).</p>
+</li>
+<li>
+<p><strong>No requiere conexion a Internet</strong>: Todo el procesamiento es local (SAPI es nativo de Windows). No se envian datos a la nube.</p>
+</li>
+<li>
+<p><strong>Compatibilidad</strong>: El programa compila tanto en 32 como en 64 bits. La version de MinGW-w64 debe coincidir con la arquitectura del sistema.</p>
+</li>
+</ol>
+<h2 id="pinout-conexion-de-audio">Pinout / conexion de audio</h2>
+<h3 id="conexion-a-la-placa-de-sonido-conector-de-35-mm">Conexion a la placa de sonido (conector de 3.5 mm)</h3>
+<p>Las placas de sonido de PC utilizan el codigo de colores para los conectores de 3.5 mm:</p>
+<pre><code>  _____  _____  _____
+ /     \/     \/     \
+| ROSA | VERDE| AZUL |
+| MIC  | AUDIO| LINE |
+|      | SAL  | ENT  |
+|______|______|______|
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">03 — Cómo se usa</div><h2>De la carpeta a la práctica.</h2></div>
-  <div class="timeline"><div class="step reveal"><div class="step-n">01</div><h4>Compilá en Windows</h4><p>El proyecto usa SAPI 5 y APIs Win32.</p></div><div class="step reveal"><div class="step-n">02</div><h4>Elegí la entrada</h4><p>Línea o micrófono según el equipo.</p></div><div class="step reveal"><div class="step-n">03</div><h4>Configurá el idioma</h4><p>El reconocedor debe tener español instalado.</p></div><div class="step reveal"><div class="step-n">04</div><h4>Hablá y leé</h4><p>La transcripción aparece en la consola.</p></div></div>
-</div></section>
+Codigo de colores estandar (PC99):
+  - ROSA:   Microfono (entrada de microfono, nivel de microfono)
+  - VERDE:  Salida de audio (auriculares/altavoces)
+  - AZUL:   Line-in / Aux-in (entrada auxiliar, nivel de linea)
+</code></pre>
+<h3 id="diagrama-de-conexion-tipica">Diagrama de conexion tipica</h3>
+<pre><code>[Fuente de audio externa]
+    |
+    | Cable de 3.5 mm (estandar)
+    |   - Punta:       Canal izquierdo
+    |   - Anillo:      Canal derecho
+    |   - Base:        Tierra (GND)
+    |
+    v
+[Placa de sonido - Conector AZUL (Line-In)]
+    |
+    | Controlador de audio (Realtek / Intel / etc.)
+    | Configurado como dispositivo predeterminado en Windows
+    |
+    v
+[SAPI 5 - SpRecognizer]
+    |
+    v
+[Texto en consola]
+</code></pre>
+<h3 id="conexion-alternativa-usb">Conexion alternativa: USB</h3>
+<p>Si su PC no tiene entrada line-in (comun en laptops modernas o dispositivos con un solo conector combinado), use un adaptador USB:</p>
+<pre><code>[Fuente de audio] -- [Adaptador USB a audio 3.5 mm] -- [Puerto USB del PC]
+</code></pre>
+<h3 id="cableado-pinout-del-conector-trs-de-35-mm">Cableado (pinout del conector TRS de 3.5 mm)</h3>
+<pre><code>Conector TRS de 3.5 mm (estandar stereo):
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">04 — Decisiones</div><h2>Lo que lo hace distinto</h2></div>
-  <div class="features"><div class="feature reveal"><h4>Sin nube</h4><p>El audio no sale del equipo.</p></div><div class="feature reveal"><h4>SAPI 5</h4><p>Motor incluido en Windows.</p></div><div class="feature reveal"><h4>Tiempo real</h4><p>Reconocimiento continuo.</p></div><div class="feature reveal"><h4>C nativo</h4><p>Bajo consumo de recursos.</p></div><div class="feature reveal"><h4>Legacy honesto</h4><p>Se declara como versión anterior.</p></div><div class="feature reveal"><h4>Entrada de línea</h4><p>Pensado para audio de una consola.</p></div></div>
-</div></section>
+    Seccion transversal:
 
-<section class="section tight" id="stack"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">05 — Stack y arranque</div><h2>Con qué está construido</h2></div>
-  <div class="stack-grid">
-    <div class="reveal"><div class="chips"><span class="chip">C</span><span class="chip">SAPI 5</span><span class="chip">Win32</span><span class="chip">Windows</span></div><div class="note"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Requiere Windows con el paquete de voz en español. No hay versión Linux: SAPI 5 es una API de Windows.</span></div></div>
-    <div class="terminal reveal"><div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><pre>git clone https://github.com/jmadasme/speech-to-text-legacy.git
-cd speech-to-text-legacy/versions/SpeechToTextAux
-# abrí el proyecto en Visual Studio o compilá con cl
-cl speech_to_text.c</pre></div>
-  </div>
-</div></section>
+      Punta (Tip)     ---&gt; Canal izquierdo (Left)
+      Anillo (Ring)   ---&gt; Canal derecho (Right)
+      Base (Sleeve)   ---&gt; Tierra (Ground)
 
-<section class="section tight" id="docs"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">06 — Documentación</div><h2>Para usar y para entender.</h2><p class="section-sub">Cada documento está en el repositorio, versionado junto al código.</p></div>
-  <div class="docs"><a class="doc reveal" href="https://github.com/jmadasme/speech-to-text-legacy/blob/main/docs/datasheet.md" target="_blank" rel="noopener"><span class="tag">DATASHEET</span><h4>Manual de operación</h4><p>Instalación, configuración, uso y diagnóstico.</p></a><a class="doc reveal" href="https://github.com/jmadasme/speech-to-text-legacy/blob/main/docs/developer.md" target="_blank" rel="noopener"><span class="tag">DEVELOPER</span><h4>Guía de código</h4><p>Arquitectura, módulos, contratos y extensión.</p></a><a class="doc reveal" href="https://github.com/jmadasme/speech-to-text-legacy/blob/main/docs/REFERENCES.md" target="_blank" rel="noopener"><span class="tag">REFERENCES</span><h4>Referencias</h4><p>Estándares, librerías y fuentes oficiales.</p></a></div>
-</div></section>
+    Vista lateral:
 
-<section class="section tight"><div class="wrap"><div class="note reveal"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><strong>Preservación:</strong> las versiones se copiaron sin <code>.git</code>, <code>node_modules</code>, entornos virtuales, compilados ni bases de datos. Los tokens y claves detectados fueron redactados; las plantillas <code>.example</code> se conservan. Las limitaciones conocidas están en la documentación, no escondidas.</span></div></div></section>
+      ====||========
+      |TIP|| RING |
+      | L  ||  R   |
+      |____||______|
+           |
+         SLEEVE (GND)
 
+    Para fuentes mono (un solo canal):
+    - Use solo la punta y la base
+    - El anillo se deja sin conectar
+    - O use un adaptador Y de mono a stereo
+</code></pre></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Lo que no funcionó</div><h2>Los tropiezos, documentados</h2><p class="section-sub">Las primeras versiones existen para que estos errores no se repitan: cada una dejó una decisión de diseño verificable.</p></div><div class="fail-grid reveal"><div class="fail"><div class="v">SpeechToTextAux</div><h3>Paquete de idioma ausente</h3><p>Windows 10 no trae el reconocedor en español instalado por defecto. El programa busca el LCID 0x0C0A y, si no lo encuentra, usa el reconocedor predeterminado y emite una advertencia; el código de error ERR_RECO_NO_LANGUAGE quedó definido pero sin uso. Se documentó la instalación manual del paquete.</p></div><div class="fail"><div class="v">SpeechToTextAux</div><h3>Entrada fija del sistema</h3><p>Recognizer_setAudioInput() llama a SetInput(NULL, TRUE), así que siempre toma el dispositivo predeterminado y no permite elegir otro desde la aplicación. Además, el line-in espera nivel de línea: un micrófono conectado directo puede sonar demasiado bajo. El README recomienda preamplificador o entrada de micrófono.</p></div><div class="fail"><div class="v">SpeechToTextAux</div><h3>Compilación dependiente de Windows</h3><p>El proyecto requiere Windows SDK o MinGW-w64 con sapi.h, y enlaza ole32, sapi y winmm. No hay compilación cruzada sencilla ni versión Linux, porque SAPI es una API de Windows. El README enumera los errores típicos de encabezados y símbolos faltantes.</p></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Ficha de evaluación</div><h2>Cómo se mide este proyecto</h2><p class="section-sub">Seis criterios con la misma escala en todo el catálogo, para comparar sin marketing.</p></div><div class="rating-head reveal"><div class="rating-avg">3.2<small>/5</small></div><div><strong>Madurez global</strong><p>Un antecedente técnico sólido y honesto sobre sus límites, valioso como referencia de SAPI 5 más que como herramienta lista para desplegar. Su dependencia de Windows acota la audiencia.</p></div></div><div class="rating reveal"><div class="rating-row"><div class="rating-name">Madurez</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Programa completo con inicialización COM, manejo de errores y cierre ordenado; sin instalador ni selector de entrada.</div></div><div class="rating-row"><div class="rating-name">Reproducibilidad</div><div class="rating-bar"><i style="width:40%"></i></div><div class="rating-score">2/5</div><div class="rating-note">Exige Windows 10, toolchain nativo, paquete de voz español y configuración manual del dispositivo; no se puede verificar en Linux.</div></div><div class="rating-row"><div class="rating-name">Documentación</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">README extenso, datasheet y guía de desarrollador cubren arquitectura y diagnóstico; el arranque rápido cita un archivo inexistente.</div></div><div class="rating-row"><div class="rating-name">Honestidad de límites</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Reconoce latencia de 0,5 a 2 s, precisión limitada, dependencia del line-in y ausencia de versión Linux.</div></div><div class="rating-row"><div class="rating-name">Valor demostrativo</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Muestra integración COM/SAPI en C con ventana oculta, eventos y liberación de recursos, reutilizable como referencia.</div></div><div class="rating-row"><div class="rating-name">Facilidad de despliegue</div><div class="rating-bar"><i style="width:40%"></i></div><div class="rating-score">2/5</div><div class="rating-note">Hay que compilar en Windows e instalar el paquete de voz; no se entrega binario ni instalador.</div></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Preguntas típicas</div><h2>Lo que suelen preguntar</h2></div><div class="faq reveal"><details><summary>¿Funciona en Linux?</summary><p>No. SAPI 5 es exclusivo de Windows.</p></details><details><summary>¿Necesita Internet?</summary><p>No. El reconocimiento es local.</p></details><details><summary>¿Qué precisión tiene?</summary><p>La de SAPI 5 en español: suficiente para dictado claro, no para audio ruidoso.</p></details><details><summary>¿Puedo usar otro micrófono?</summary><p>Sí, seleccionando el dispositivo de entrada del sistema.</p></details><details><summary>¿Hay una versión moderna?</summary><p>Sí, la familia de asistentes locales usa modelos actuales; esta se conserva como antecedente.</p></details></div></div></section>
 <section class="cta"><div class="wrap"><div class="cta-box reveal">
   <div class="kicker">Siguiente paso</div><h2>¿Te animás?</h2>
   <p>Usá esta familia como base para speech to text legacy. Está documentada para que puedas entenderla, ejecutarla y continuarla sin adivinar.</p>

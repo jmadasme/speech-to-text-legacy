@@ -33,6 +33,60 @@ cl speech_to_text.c
 
 Requiere Windows con el paquete de voz en español. No hay versión Linux: SAPI 5 es una API de Windows.
 
+<!-- ficha -->
+## Ficha de evaluación
+
+**Madurez global: 3.2/5**
+
+| Criterio | Nota | Evidencia |
+|---|---:|---|
+| Madurez | 3/5 | Programa completo con inicialización COM, manejo de errores y cierre ordenado; sin instalador ni selector de entrada. |
+| Reproducibilidad | 2/5 | Exige Windows 10, toolchain nativo, paquete de voz español y configuración manual del dispositivo; no se puede verificar en Linux. |
+| Documentación | 4/5 | README extenso, datasheet y guía de desarrollador cubren arquitectura y diagnóstico; el arranque rápido cita un archivo inexistente. |
+| Honestidad de límites | 4/5 | Reconoce latencia de 0,5 a 2 s, precisión limitada, dependencia del line-in y ausencia de versión Linux. |
+| Valor demostrativo | 4/5 | Muestra integración COM/SAPI en C con ventana oculta, eventos y liberación de recursos, reutilizable como referencia. |
+| Facilidad de despliegue | 2/5 | Hay que compilar en Windows e instalar el paquete de voz; no se entrega binario ni instalador. |
+
+Un antecedente técnico sólido y honesto sobre sus límites, valioso como referencia de SAPI 5 más que como herramienta lista para desplegar. Su dependencia de Windows acota la audiencia.
+
+## Lo que no funcionó
+
+### SpeechToTextAux — Paquete de idioma ausente
+
+Windows 10 no trae el reconocedor en español instalado por defecto. El programa busca el LCID 0x0C0A y, si no lo encuentra, usa el reconocedor predeterminado y emite una advertencia; el código de error ERR_RECO_NO_LANGUAGE quedó definido pero sin uso. Se documentó la instalación manual del paquete.
+
+### SpeechToTextAux — Entrada fija del sistema
+
+Recognizer_setAudioInput() llama a SetInput(NULL, TRUE), así que siempre toma el dispositivo predeterminado y no permite elegir otro desde la aplicación. Además, el line-in espera nivel de línea: un micrófono conectado directo puede sonar demasiado bajo. El README recomienda preamplificador o entrada de micrófono.
+
+### SpeechToTextAux — Compilación dependiente de Windows
+
+El proyecto requiere Windows SDK o MinGW-w64 con sapi.h, y enlaza ole32, sapi y winmm. No hay compilación cruzada sencilla ni versión Linux, porque SAPI es una API de Windows. El README enumera los errores típicos de encabezados y símbolos faltantes.
+
+## Preguntas típicas
+
+**¿Funciona en Linux?**
+
+No. SAPI 5 es exclusivo de Windows.
+
+**¿Necesita Internet?**
+
+No. El reconocimiento es local.
+
+**¿Qué precisión tiene?**
+
+La de SAPI 5 en español: suficiente para dictado claro, no para audio ruidoso.
+
+**¿Puedo usar otro micrófono?**
+
+Sí, seleccionando el dispositivo de entrada del sistema.
+
+**¿Hay una versión moderna?**
+
+Sí, la familia de asistentes locales usa modelos actuales; esta se conserva como antecedente.
+
+<!-- /ficha -->
+
 ## Documentación
 
 - [`docs/datasheet.md`](docs/datasheet.md) — instalación, operación y límites.
@@ -40,9 +94,9 @@ Requiere Windows con el paquete de voz en español. No hay versión Linux: SAPI 
 - [`docs/REFERENCES.md`](docs/REFERENCES.md) — estándares, librerías y fuentes.
 - [`docs/index.html`](docs/index.html) — página del proyecto (GitHub Pages).
 
-## Alcance y honestidad
+## El proyecto en detalle
 
-## SpeechToTextAux
+### SpeechToTextAux
 
 Reconocimiento de voz en español en tiempo real desde la entrada auxiliar (line-in) de Windows 10, utilizando la API nativa **SAPI (Speech API)** de Microsoft.
 
